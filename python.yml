@@ -16,7 +16,7 @@ jobs:
     - name: Set up Python  # Pythonのセットアップ
       uses: actions/setup-python@v2
       with:
-        python-version: '3.x'  # 使用するPythonのバージョン
+        python-version: '3.12.3'  # 使用するPythonのバージョン
 
     - name: Install dependencies  # 依存関係のインストール
       run: |
