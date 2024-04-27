@@ -1,0 +1,27 @@
+name: Python Workflow
+
+on:
+  push:
+    branches:
+      - main  # プッシュされたブランチ名
+
+jobs:
+  build:
+    runs-on: ubuntu-latest  # 実行するオペレーティングシステム
+
+    steps:
+    - name: Checkout repository  # リポジトリをチェックアウト
+      uses: actions/checkout@v2
+
+    - name: Set up Python  # Pythonのセットアップ
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'  # 使用するPythonのバージョン
+
+    - name: Install dependencies  # 依存関係のインストール
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt  # 必要な場合
+
+    - name: Run Python script  # Pythonスクリプトの実行
+      run: python path/to/your/script.py  # 実行するPythonスクリプトのパスを指定
