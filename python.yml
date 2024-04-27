@@ -24,4 +24,4 @@ jobs:
         pip install -r requirements.txt  # 必要な場合
 
     - name: Run Python script  # Pythonスクリプトの実行
-      run: python path/to/your/script.py  # 実行するPythonスクリプトのパスを指定
+      run: python 34.py  # 実行するPythonスクリプトのパスを指定
